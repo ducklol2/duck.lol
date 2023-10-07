@@ -5,12 +5,16 @@
   <title>🦆.lol</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Pro">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <style>
     * {
       box-sizing: border-box;
-      /* border: 1px solid black; */
-      font-family: "Roboto", sans-serif;
+      font-family: "Crimson Pro";
+      line-height: 1.8;
     }
 
     html {
@@ -29,9 +33,14 @@
       padding: 30px;
     }
 
+    h1 {
+      font-size: 5em;
+    }
+
     h1,
     h2,
     h5 {
+      margin: 0;
       text-align: center;
     }
 
@@ -41,7 +50,8 @@
     }
 
     article {
-      padding: 20px;
+      font-size: 1.2rem;
+      padding: 30px 100px;
     }
   </style>
 </head>
@@ -51,58 +61,25 @@
     <h1>🦆.lol</h1>
     <nav>
       <h3><a href="https://github.com/ducklol2/" target="_blank">Github</a></h3>
-      <h3><a href="https://hachyderm.io/@duck_lol" target="_blank">Mastodon</a></h3>
-      <h3><a href="https://news.ycombinator.com/user?id=ducklol" target="_blank">Hacker News</a></h3>
     </nav>
   </header>
   <article>
-    <h2>Service Workers as a server</h2>
-    <h5>July 22nd, 2023</h5>
+    <h2>Publishing .local domains, automatically</h2>
+    <h5>October 7th, 2023</h5>
     <p>
-      Service workers make websites work offline (or more efficiently!),
-      intercepting network requests and typically storing and retrieving responses
-      in the Cache API. Often, some of the application logic is shared between
-      the server and service worker.
+      My first thing! I've been playing with random things in
+      Docker containers on random local devices recently, but I didn't
+      like using IPs, or ports, or managing DNS servers, or adding DNS
+      entries to all my clients. I love how Traefik configures itself
+      based on Docker compose labels, so I made a tool that does the same
+      thing, but for using mDNS to publish `.local` addresses:
+
+      <p>
+        <a href="https://github.com/ducklol2/quack_domains" target="_blank">
+          github.com/ducklol2/quack_domains
+        </a>
+      </p>
     </p>
-    <p>
-      But what if all the logic were only in the service worker, though?
-      No server logic?
-    </p>
-    <p>
-      Although I can't think of a great reason to do this, I thought it was a nifty
-      idea and decided to build it. It could be useful for quick prototyping - there's
-      hundreds of web code "playgrounds" that let you write and test HTML/CSS/JS live,
-      and there's even some that run your code as an HTTP handler - from a server they
-      spin up for you. But you could run this from a service worker instead, and then
-      all you need to serve are some static pages! And your precious prototype code
-      never leaves your computer :)
-    </p>
-    <p>
-      I haven't come across a code playground that does this, but if it's been done,
-      I'd love to hear about it!
-    </p>
-    <p>
-      Of course, there's a lot of differences between the browser and Node environments,
-      so you can't just, say, import Express, prototype a quick app, export it & run it
-      locally. I could imagine developing a similar request handling API that would let
-      the same code work with a common server framework. For now, my API requires you to
-      export two values (it runs as a module):
-      <ul>
-        <li><b>paths</b>: A list of regular expressions for the paths to handle.</li>
-        <li>
-          <b>handle</b>: A function that accepts a request object and returns a response
-          object. See the example loaded in the app for the fields. This function can be
-          async!
-        </li>
-      </ul>
-    </p>
-    <p>TODO: Link to app</p>
-  </article>
-  <article>
-    <h2>WebRTC without a server</h2>
-    <h5>July 22nd, 2023</h5>
-    <p>Text of the article</p>
-    <p>More text!</p>
   </article>
 </body>
 
