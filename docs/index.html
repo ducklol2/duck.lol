@@ -73,12 +73,29 @@
       entries to all my clients. I love how Traefik configures itself
       based on Docker compose labels, so I made a tool that does the same
       thing, but for using mDNS to publish `.local` addresses:
-
-      <p>
-        <a href="https://github.com/ducklol2/quack_domains" target="_blank">
-          github.com/ducklol2/quack_domains
-        </a>
-      </p>
+    </p>
+    <p>
+      <a href="https://github.com/ducklol2/quack_domains" target="_blank">
+        github.com/ducklol2/quack_domains
+      </a>
+    </p>
+    <p>
+      I swear that I looked around for something like this prior to
+      building it myself, and somehow I didn't find anything - but turns
+      out many others have built something similar. Check them out too, see
+      what makes sense to you!
+      <ul>
+        <li>
+          <a href="https://gitlab.com/viraptor/docker_mdns" target="_blank">
+            gitlab.com/viraptor/docker_mdns</a>:
+          Written in Crystal, runs as a systemd service
+        </li>
+        <li>
+          <a href="https://github.com/hardillb/traefik-avahi-helper" target="_blank">
+            github.com/hardillb/traefik-avahi-helper</a>:
+          Written in JS & Python, runs as a container
+        </li>
+      </ul>
     </p>
   </article>
 </body>
