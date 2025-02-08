@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>🦆.lol</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>🦆.lol</h1>
+    </header>
+
+    <main>
+
+        <article id="publishing-local">
+            <h2>Publishing .local domains, automatically</h2>
+            <h5>Oct 7, 2023</h5>
+
+            <p>
+                My first thing! I've been playing with random things in
+                Docker containers on random local devices recently, but I didn't
+                like using IPs, or ports, or managing DNS servers, or adding DNS
+                entries to all my clients. I love how Traefik configures itself
+                based on Docker compose labels, so I made a tool that does the same
+                thing, but for using mDNS to publish `.local` addresses:
+            </p>
+
+            <p><a href="https://github.com/ducklol2/quack_domains">github.com/ducklol2/quack_domains</a></p>
+
+            <p>I swear that I looked around for something like this prior to
+                building it myself, and somehow I didn't find anything - but turns
+                out many others have built something similar. Check them out too, see
+                what makes sense to you!</p>
+
+            <ul>
+                <li>
+                    <a href="https://gitlab.com/viraptor/docker_mdns">gitlab.com/viraptor/docker_mdns</a>
+                    - written in Crystal, runs as a systemd service
+                </li>
+
+                <li>
+                    <a
+                        href="https://github.com/hardillb/traefik-avahi-helper">github.com/hardillb/traefik-avahi-helper</a>
+                    - written in JS & Python, runs as a container, monitors for changes
+                </li>
+            </ul>
+            </pre>
+        </article>
+    </main>
+</body>
+
+</html>
