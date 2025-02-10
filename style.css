@@ -17,3 +17,7 @@ main {
     margin: 0 auto;
     padding: 10px;
 }
+
+h2, h5 {
+    margin: 5px;
+}
